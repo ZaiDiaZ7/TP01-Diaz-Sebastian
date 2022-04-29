@@ -14,10 +14,10 @@ public class Punto3Controller {
 	@GetMapping("/resolverPunto3")
 	public String getPunto3Page( @RequestParam (name = "num1") int num1, Model model ) {
 		
-		Punto3 aPunto3 = new Punto3();
+		Punto3 nuevoPunto3 = new Punto3();
 		String iseven="SI es par", noteven="NO es par";
-		aPunto3.setNum(num1);
-		if(aPunto3.IsEven() == true)
+		nuevoPunto3.setNum(num1);
+		if(nuevoPunto3.IsEven() == true)
 			model.addAttribute("Punto3", iseven);
 		else
 			model.addAttribute("Punto3", noteven);

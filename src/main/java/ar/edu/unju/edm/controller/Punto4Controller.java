@@ -14,9 +14,9 @@ public class Punto4Controller {
 	@GetMapping("/resolverPunto4")
 	public String getPunto4Page( @RequestParam (name = "num") int num, Model model ) {
 		String whatis;
-		Punto4 aPunto4 = new Punto4();
-		aPunto4.setNum(num);
-		if(aPunto4.IsMonth() == true)
+		Punto4 newPunto4 = new Punto4();
+		newPunto4.setNum(num);
+		if(newPunto4.IsMonth() == true)
 			whatis = "SI es un mes";
 		else
 			whatis = "NO es un mes";
